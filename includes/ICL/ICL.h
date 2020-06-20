@@ -59,30 +59,6 @@ const char *icl_info_getImplementation();
 int icl_i2c_setBaudRate(int baud);
 
 /**
- * @brief Write a single byte to the specified slave address.
- * @param [in] slaveAddress
- *     The I2C address of the slave address. Maximum 10 bits, higher bits will
- *     be ignored.
- * @param [in] byte
- *     The byte information that is going to be sent to the slave device.
- * @return
- *     Zero if there is no error, otherwise an non-zero error code.
- */
-int icl_i2c_writeByte(uint16_t slaveAddress, uint8_t byte);
-
-/**
- * @brief Read a single byte from the specified slave address.
- * @param [in] slaveAddress
- *     The I2C address of the slave address. Maximum 10 bits, higher bits will
- *     be ignored.
- * @param [out] byte
- *     The byte information that is read from the slave device.
- * @return
- *     Zero if there is no error, otherwise an non-zero error code.
- */
-int icl_i2c_readByte(uint16_t slaveAddress, uint8_t *byte);
-
-/**
  * @brief Write a batch of bytes to the specified slave address.
  * @param [in] slaveAddress
  *     The I2C address of the slave address. Maximum 10 bits, higher bits will
@@ -131,19 +107,6 @@ int icl_i2c_readBytes(uint16_t slaveAddress, size_t count, uint8_t *byte);
  *     Zero if there is no error, otherwise an non-zero error code.
  */
 int icl_spi_setSpeed(int hz);
-
-/**
- * @brief Transfer a single byte between the master and the slave devices.
- * @param [in] chip
- *     Select chip using an integer number.
- * @param [in] sent
- *     The byte that is going to be sent to the slave device.
- * @param [out] received
- *     The byte that is received from the slave device.
- * @return
- *     Zero if there is no error, otherwise an non-zero error code.
- */
-int icl_spi_transferByte(int chip, uint8_t sent, uint8_t *received);
 
 /**
  * @brief Transfer a batch of bytes between the master and the slave devices.
