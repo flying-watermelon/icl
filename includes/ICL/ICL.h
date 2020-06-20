@@ -5,6 +5,7 @@
 #ifndef __ICL_H__
 #define __ICL_H__
 
+#include <stddef.h>
 #include <stdint.h>
 
 #ifdef __cplusplus
