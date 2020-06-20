@@ -8,6 +8,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#define ICL_NO_ERROR 0
+
 #ifdef __cplusplus
 extern "C" {
 #endif
