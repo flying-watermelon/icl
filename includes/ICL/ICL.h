@@ -87,7 +87,7 @@ int icl_i2c_writeBytes(uint16_t slaveAddress, size_t count, const uint8_t *bytes
  * @return
  *     Zero if there is no error, otherwise an non-zero error code.
  */
-int icl_i2c_readBytes(uint16_t slaveAddress, size_t count, uint8_t *byte);
+int icl_i2c_readBytes(uint16_t slaveAddress, size_t count, uint8_t *bytes);
 
 /**
  * @}
